@@ -83,10 +83,18 @@
 				$(".pagecheck li").eq(i).addClass("on");
 
 				if(i < 7){
-					$(".pagecheck li").css('background','#111111');
+					$(".pagecheck li").css('background','#111');
+					$(".zerosoda").css('background-color','#333');
+					$(".zerosoda .sec_info .ttl").css('color','#fff');
+					$(".zerosoda .sec_info ul li").css('color','#fff');
+					$(".zerosoda .sec_info .visit").css('color','#fff');
 				}
 				if(i < 6){
 					$(".pagecheck li").css('background','#712681');
+					$(".zerosoda").css('background-color','#fff');
+					$(".zerosoda .sec_info .ttl").css('color','#333');
+					$(".zerosoda .sec_info ul li").css('color','#333');
+					$(".zerosoda .sec_info .visit").css('color','#333');
 				}
 				if(i < 5){
 					$(".pagecheck li").css('background','#f8a5ac');
@@ -95,7 +103,7 @@
 					$(".pagecheck li").css('background','#0381ff');
 				}
 				if(i < 2){
-					$(".pagecheck li").css('background','#FBE45E');
+					$(".pagecheck li").css('background','#ffd503');
 				}
 				if(i < 1){
 					$(".pagecheck li").css('background','transparent');
