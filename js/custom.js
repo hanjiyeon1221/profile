@@ -74,7 +74,7 @@
 		}
 		*/
 		
-		for(var i=0; i<6;i++){
+		for(var i=0; i<7;i++){
 			if(scroll>=ht*i && scroll< ht*(i+1)){
 				$("#menu li").removeClass();
 				$("#menu li").eq(i).addClass("on");
@@ -82,6 +82,9 @@
 				$(".pagecheck li").removeClass();
 				$(".pagecheck li").eq(i).addClass("on");
 
+				if(i < 7){
+					$(".pagecheck li").css('background','#111111');
+				}
 				if(i < 6){
 					$(".pagecheck li").css('background','#712681');
 				}
@@ -90,6 +93,9 @@
 				}
 				if(i < 4){
 					$(".pagecheck li").css('background','#0381ff');
+				}
+				if(i < 2){
+					$(".pagecheck li").css('background','#FBE45E');
 				}
 				if(i < 1){
 					$(".pagecheck li").css('background','transparent');
@@ -117,7 +123,7 @@
             //마우스 휠을 내렸을때	 
               }else if (delta < 0) {  
                 //변수 next에 현재 휠을 움직인 section에서 다음 section의 offset().top위치 저장
-				if($(this).index()!=7){ 
+				if($(this).index()!=8){ 
 				var next = $(this).next().offset().top;
                  //문서 전체를 next에 저장된 위치로 이동
                  $("html,body").stop().animate({"scrollTop":next},1200);  

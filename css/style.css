@@ -53,33 +53,63 @@ body {
 }
 .logo a{ 
     display: block;
+    width: 80px;
+    height: 80px;
+    background-image: url(../img/namelogo_1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: change .5s infinite ease-in-out;
+    position: relative;
 }
-.logo a img{
+@keyframes change {
+    0%{background-image: url(../img/namelogo_1.png);}
+    12.5%{background-image: url(../img/namelogo_1_1.png);}
+    25%{background-image: url(../img/namelogo_2.png);}
+    37.5%{background-image: url(../img/namelogo_2_1.png);}
+    50%{background-image: url(../img/namelogo_3.png);}
+    62.5%{background-image: url(../img/namelogo_3_1.png);}
+    75%{background-image: url(../img/namelogo_4.png);}
+    87.5%{background-image: url(../img/namelogo_4_1.png);}
+    100%{background-image: url(../img/namelogo_1.png);}
+    
+}
+/* .logo a img{
     width: 100%;
     animation: rotate_img 3s infinite linear;
 }
 @keyframes rotate_img{
     to{}
     from{transform: rotate(-360deg);}
-}
+} */
 
 .logo a::before{
-    content: 'Y';
-    color: #0381ff;
+    content: '';
+    /* color: #0381ff; */
     position: absolute;
-    left: -25px;
-    top: -5px;
-    font-size: 2rem;
-    font-weight: 700;
+    display: block;
+    width: 80px;
+    height: 80px;
+    left: -60px;
+    top: 20px;
+    /* font-size: 2rem;
+    font-weight: 700; */
+    background-image: url(../img/namelogo_5.png);
+    background-size: cover;
 }
 .logo a::after{
-    content: 'NI';
-    color: #0381ff;
+    content: '';
+    /* color: #0381ff; */
     position: absolute;
-    right: -40px;
-    top: -5px;
-    font-size: 2rem;
-    font-weight: 700;
+    display: block;
+    width: 80px;
+    height: 80px;
+    left: 60px;
+    top: 0;
+    /* font-size: 2rem;
+    font-weight: 700; */
+    background-image: url(../img/namelogo_6.png);
+    background-size: cover;
+    z-index: -1;
 }
 
 /*메뉴*/
@@ -102,6 +132,10 @@ body {
     font-size: 100%;
     position: relative;
 }
+#menu li:nth-child(7) a {
+    color:#FBE45E;
+ }
+
 #menu li a::before { 
     content: '';
     display: block;
@@ -133,6 +167,7 @@ body {
 #menu li:nth-child(1).on a,#menu li:nth-child(2).on a,#menu li:nth-child(3).on a,
 #menu li:nth-child(4).on a,#menu li:nth-child(5).on a,#menu li:nth-child(6).on a { color:#0381ff;} 
 
+/* #menu li:nth-child(7):hover a, #menu li:nth-child(7).on a { color:#0381ff;} */
 
 .pagecheck{
     position: fixed;
@@ -165,6 +200,7 @@ body {
     display: inline-block;
     border-radius: 50px;
     border: 1px solid #0381ff;
+    box-shadow: 0px 0px 5px #0381ff;
     padding: 10px 15px;
     z-index:10;
     font-size: 1rem;
@@ -697,3 +733,53 @@ section .sec_info .sub3{
     background: url(../img/sub_responsive2.png) no-repeat 0% 110%;
     background-size: 40%;
 }
+
+/* 제로소다 풀페이지 */
+.zerosoda{
+    position: relative;
+    overflow: hidden;
+}
+.zerosoda::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url(../img/zerosoda_logo.png) no-repeat 95% 20%;
+    background-size: 30%;
+    opacity: 0.2;
+}
+.zerosoda .gif_box{
+    width: 70%;
+    top: 2%;
+    left: 50.5%;
+}
+
+.zerosoda .sec_info .ttl span{
+    color: #fe6b98;
+}
+.zerosoda .sec_info ul li:nth-child(1){
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.zerosoda .sec_info .visit{
+    border: 1px solid #111111;
+}
+.zerosoda .sec_info .visit::before{
+    background: #111111;
+}
+
+section .sec_info .main4{
+    background: #fe6b98;
+    margin-left: 20px;
+}
+section .sec_info .sub4{
+    background: #111111;
+    margin-left: 10px;
+}
+
+
+
+
