@@ -102,12 +102,27 @@
 				if(i < 4){
 					$(".pagecheck li").css('background','#0381ff');
 				}
+
 				if(i < 2){
 					$(".pagecheck li").css('background','#ffd503');
+					$('.profile_wrap').addClass('on');
 				}
+				
 				if(i < 1){
 					$(".pagecheck li").css('background','transparent');
 				}
+
+				function pageChange(section, page){
+					if(i == page){
+						$(`${section} .img_box`).addClass('on');
+						$(`${section} .sec_info`).addClass('on');
+					}
+				}
+				pageChange('.pc', 2);
+				pageChange('.mobile', 3);
+				pageChange('.responsive', 4);
+				pageChange('.wordpress', 5);
+				pageChange('.zerosoda', 6);
 			};
 		}
 	});

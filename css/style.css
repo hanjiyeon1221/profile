@@ -283,8 +283,17 @@ section {
     width: 50%;
     position: relative;
     text-align: center;
-    
+    left: -100px;
+    opacity: 0;
 }
+.profile .profile_wrap.on .pro_img{
+    animation: active1 1s .5s 1 forwards;
+}
+@keyframes active1 {
+    0%{}
+    100%{left: 0; opacity: 1;}
+}
+
 .profile .profile_wrap .pro_img::before{
     content: '';
     display: block;
@@ -341,18 +350,33 @@ section {
 .profile .profile_wrap>p{
     text-align: center;
     font-size: 2.5rem;
+    margin-left: -100px;
+    opacity: 0;
 }
+.profile .profile_wrap.on>p{
+    animation: active2 1s 1s 1 forwards;
+}
+@keyframes active2 {
+    0%{}
+    100%{margin-left: 0; opacity: 1;}
+}
+
 .profile .profile_wrap>p span{
     display: block;
     font-size: 1rem;
 }
 
-
 .profile .profile_wrap .pro_site{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-left: -100px;
+    opacity: 0;
 }
+.profile .profile_wrap.on .pro_site{
+    animation: active2 1s 1.5s 1 forwards;
+}
+
 .profile .profile_wrap .pro_site li{
     margin-right: 20px;
     border: 1px solid #333;
@@ -474,7 +498,15 @@ section {
 }
 
 
-
+/* 공통 애니메이션 */
+@keyframes leftBox {
+    0%{}
+    100%{left: 0; opacity: 1;}
+}
+@keyframes rightBox {
+    0%{}
+    100%{right: 0; opacity: 1;}
+}
 
 
 /* 기업형 페이지 */
@@ -502,7 +534,13 @@ section {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    left: -200px;
+    opacity: 0;
 }
+.img_box.on{
+    animation: leftBox 1s 1 forwards;
+}
+
 .img_box div img{
     vertical-align: top;
     width: 100%;
@@ -530,7 +568,13 @@ section .sec_info{
     transform: translateY(-50%);
     padding-right: 5%;
     box-sizing: border-box;
+    right: -200px;
+    opacity: 0;
 }
+section .sec_info.on{
+    animation: rightBox 1s .3s 1 forwards;
+}
+
 section .sec_info .ttl{
     position: relative;
 }
