@@ -399,5 +399,24 @@
                 </section>
             </article>
         </div>
+        <div class="new_popup">
+            <div>
+                <p>✨포트폴리오가 리뉴얼되었습니다✨</p>
+                <a href="http://cjstkapfhddl.cafe24.com/portfolio/" target="_blank" title="new 포트폴리오 새창으로 열림">NEW 포트폴리오 보러가기</a>
+                <button type="button">✖️</button>
+            </div>
+        </div>
+
+        <script>
+            window.onload = function () {
+                const newPopup = document.querySelector('.new_popup');
+                const popupCloseBtn = newPopup.querySelector('button');
+
+                popupCloseBtn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    newPopup.style.display = 'none';
+                });
+            };
+        </script>
     </body>
 </html>
